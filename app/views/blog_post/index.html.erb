@@ -1,0 +1,8 @@
+<h1> Kelly and Elijah's STRONG BLOG </h1>
+<ul>
+  <% @blogposts.map do |value| %>
+    <li>
+      <h2><%= value.title %></h2>
+    </li>
+  <% end %>
+</ul>
