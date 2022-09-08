@@ -2,7 +2,10 @@
 <ul>
   <% @blogposts.map do |value| %>
     <li>
-      <h2><%= value.title %></h2>
+      <h2><%= link_to "#{value.title}", blog_post_path(value)%></h2>
+
     </li>
   <% end %>
+
+ <%= button_to  "Write a new Blog Post " , new_blog_post_path, :method => 'get'%>
 </ul>
